@@ -28,8 +28,8 @@ public class Three_Make_Net_Const_090316 extends Thread {
     Thread t;
     int i;
     
-    
-    Three_Make_Net_Const_090316(int start) throws IOException //takes input from three files
+    //takes input from three files
+    Three_Make_Net_Const_090316(int start) throws IOException 
     {
         i = start;
         
