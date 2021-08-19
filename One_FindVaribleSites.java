@@ -35,14 +35,14 @@ public class One_FindVaribleSites {
 
                 int flag = 0;
                 char[] data;
-				String path = "/Users/complexsystemslab/Dropbox/Ancient_mtDNA/02_Meso";//input
+				String path = "";//input
 				path = "";
 
-                wVList = new FileWriter(path + "VList_Meso.dat", true) ;
-                wVSeqList = new FileWriter(path + "VSeqList_Meso.dat", true) ;
-                fileList = new FileWriter(path + "FileList_Meso.dat", true) ;
+                wVList = new FileWriter(path + "VList.dat", true) ; //file contains variable sites
+                wVSeqList = new FileWriter(path + "VSeqList.dat", true) ; //file contains genomic sequences with variable sites only
+                fileList = new FileWriter(path + "FileList.dat", true) ; //file contains the list of sequence names
 
-                BufferedReader br = new BufferedReader(new FileReader(path + "02_Meso.fasta"));//input
+                BufferedReader br = new BufferedReader(new FileReader(path + "Population.fasta"));//input aligned fasta file
 				String pattern = "(>)(.*)";
 				Pattern r = Pattern.compile(pattern);
 
@@ -158,7 +158,7 @@ public class One_FindVaribleSites {
 
 			countC++;
                     }
-                    if(var[j] == 'N' || var[j] == '-' || var[j] == 'Y' || var[j] == 'R' || var[j] == 'M' || var[j] == 'W'){
+                    if(var[j] == 'N' || var[j] == '-' || var[j] == 'Y' || var[j] == 'R' || var[j] == 'M' || var[j] == 'W'){ //not considering the ambiguous sites
 
 			countN++;
 			IsNPresent = true;
