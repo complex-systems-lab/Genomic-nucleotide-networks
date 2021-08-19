@@ -29,7 +29,7 @@ public class Three_Make_Net_Const_090316 extends Thread {
     int i;
     
     
-    Three_Make_Net_Const_090316(int start) throws IOException
+    Three_Make_Net_Const_090316(int start) throws IOException //takes input from three files
     {
         i = start;
         
@@ -37,10 +37,10 @@ public class Three_Make_Net_Const_090316 extends Thread {
         cList = new ArrayList<String>();
         fileList = new ArrayList<String>();
         
-        // path = "E:\\MitoNew\\Method_2\\090316\\as\\1_100\\";
+        path = "\home\project\";
         path = "";
         
-        brvList = new BufferedReader(new FileReader(path + "VList_Meso.dat"));
+        brvList = new BufferedReader(new FileReader(path + "VList.dat"));
         
         String line;
         while (((line = brvList.readLine()) != null)) {
@@ -48,13 +48,13 @@ public class Three_Make_Net_Const_090316 extends Thread {
             vList.add(Integer.parseInt(line));
         }
         
-        brvSeqList = new BufferedReader(new FileReader(path + "VSeqList_Meso.dat"));
+        brvSeqList = new BufferedReader(new FileReader(path + "VSeqList.dat"));
         while (((line = brvSeqList.readLine()) != null)) {
             
             cList.add(line);
         }
         
-        brfileList = new BufferedReader(new FileReader(path + "FileList_Meso.dat"));
+        brfileList = new BufferedReader(new FileReader(path + "FileList.dat"));
         while (((line = brfileList.readLine()) != null)) {
             
             fileList.add(line);
@@ -145,11 +145,11 @@ public class Three_Make_Net_Const_090316 extends Thread {
                             }
                             
                         }//i1 ends
-                        
+                        // Calculate the co-occurrence frequency
                         double connectFreq = (((double)count12 / (double)(numOfSeq)) * ((double)count12 / (double)(numOfSeq))) /
                         (((double)countFirstPos / (double)(numOfSeq)) * ((double)countSecondPos / (double)(numOfSeq)));
                         
-                        
+                        //define the threshold for network construction
                         if(connectFreq >= 0.0)
                         {
                             
