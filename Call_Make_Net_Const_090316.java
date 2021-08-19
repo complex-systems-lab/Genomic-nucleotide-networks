@@ -9,7 +9,7 @@ public class Call_Make_Net_Const_090316 {
 
     public static void main(String pra[]) throws IOException
     {
-      N = 100 //input the number of samples here
+      int N = 100 //input the number of samples here
       for(int i = 0; i <= N; i = i+5)
       {
            boolean Is1Alive = true;
