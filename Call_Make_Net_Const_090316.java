@@ -9,8 +9,8 @@ public class Call_Make_Net_Const_090316 {
 
     public static void main(String pra[]) throws IOException
     {
-
-      for(int i = 0; i <= 72; i = i+5)
+      N = 100 //input the number of samples here
+      for(int i = 0; i <= N; i = i+5)
       {
            boolean Is1Alive = true;
            boolean Is2Alive = true;
