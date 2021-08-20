@@ -180,8 +180,8 @@ public class Step2_ConstructNetwork implements Runnable {
         cList = new ArrayList<String>();
         fileList = new ArrayList<String>();
         
-        String folder = "tib";
-        path = "/Users/thirdeye/Dropbox/High_alt_TEA/Tibetan/Co-mutation/";
+        String folder = "folder";
+        path = "/home/directory/";
         
         writer = new FileWriter(path + "Network/" + folder + "_net.dat");
 	    
